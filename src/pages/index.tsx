@@ -1,7 +1,28 @@
 import Head from "next/head";
-import { Box, Button } from "@mui/material";
+import { Box, Button, TextField, Autocomplete } from "@mui/material";
+import { ChangeEvent, useState } from "react";
 
 export default function Home() {
+  const [suggests, setSuggests] = useState<string[]>([]);
+
+  const onChangeSearchBox = (e: ChangeEvent<HTMLInputElement>) => {
+    const resolver = async () => {
+      const val = encodeURIComponent(e.target.value);
+      const url = `https://corsproxy.io/?https%3A%2F%2Fwww.google.com%2Fcomplete%2Fsearch%3Fhl%3Dja%26q%3D${val}%26output%3Dtoolbar`;
+      const res = await fetch(url);
+      // parse as xml
+      const xml = await res.text();
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(xml, "application/xml");
+      const suggestions = doc.getElementsByTagName("suggestion");
+      const results = Array.from(suggestions).map((suggestion) => {
+        return suggestion.getAttribute("data");
+      });
+      setSuggests(results as string[]);
+    };
+    resolver();
+  };
+
   return (
     <>
       <Head>
@@ -11,6 +32,16 @@ export default function Home() {
       </Head>
       <main>
         <Box>
+          <Autocomplete
+            disablePortal
+            freeSolo
+            options={suggests}
+            sx={{ width: 300 }}
+            renderInput={(params) => (
+              <TextField onChange={onChangeSearchBox} {...params} />
+            )}
+          />
+
           <Button variant="contained" color="primary">
             hoge
           </Button>
