@@ -14,6 +14,7 @@ export default function Home() {
           <Gmails />
         </Box>
         <GoogleSearchBox />
+        <Box mt={5}></Box>
       </Box>
     </>
   );
