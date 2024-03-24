@@ -10,32 +10,37 @@ export const Bookmarks = () => {
   const bookmarks: Bookmark[] = [
     {
       title: "Twitter",
-      imageUrl: "/twitter.png",
+      imageUrl: "./twitter.png",
       url: "https://twitter.com",
     },
     {
       title: "Google",
-      imageUrl: "/google.png",
+      imageUrl: "./google.png",
       url: "https://www.google.com",
     },
     {
       title: "GitHub",
-      imageUrl: "/github.png",
+      imageUrl: "./github.png",
       url: "https://github.com/yudai1204?tab=repositories",
     },
     {
+      title: "ChatGPT",
+      imageUrl: "./gpt.png",
+      url: "https://chat.openai.com",
+    },
+    {
       title: "ScombZ",
-      imageUrl: "/scombz.png",
+      imageUrl: "./scombz.png",
       url: "https://scombz.shibaura-it.ac.jp",
     },
     {
       title: "YouTube",
-      imageUrl: "/youtube.png",
+      imageUrl: "./youtube.png",
       url: "https://www.youtube.com",
     },
     {
       title: "Amazon",
-      imageUrl: "/amazon.png",
+      imageUrl: "./amazon.png",
       url: "https://www.amazon.co.jp",
     },
   ];
@@ -53,8 +58,6 @@ export const Bookmarks = () => {
         <a
           key={bookmark.title}
           href={bookmark.url}
-          target="_blank"
-          rel="noopener noreferrer"
           style={{ textDecoration: "none", color: "inherit" }}
         >
           <Button
@@ -64,6 +67,7 @@ export const Bookmarks = () => {
               justifyContent: "center",
               flexDirection: "column",
               gap: 1,
+              paddingTop: 1,
               width: "100%",
               color: "text.secondary",
               boxShadow: 2,

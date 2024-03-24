@@ -60,7 +60,7 @@ export const GoogleMenu = () => {
         onClick={toggle}
       >
         <img
-          src="/apps.svg"
+          src="./apps.svg"
           alt="apps"
           style={{ width: "100%", height: "100%", display: "block" }}
         />
@@ -90,47 +90,47 @@ export const GoogleMenu = () => {
           }}
         >
           <GoogleIcons
-            iconUrl="/gmail.png"
+            iconUrl="./gmail.png"
             url="https://mail.google.com/"
             title="Gmail"
           />
           <GoogleIcons
-            iconUrl="/maps.png"
+            iconUrl="./maps.png"
             url="https://maps.google.com/"
             title="マップ"
           />
           <GoogleIcons
-            iconUrl="/youtube.png"
+            iconUrl="./youtube.png"
             url="https://www.youtube.com/"
             title="YouTube"
           />
           <GoogleIcons
-            iconUrl="/translate.png"
+            iconUrl="./translate.png"
             url="https://translate.google.com/"
             title="翻訳"
           />
           <GoogleIcons
-            iconUrl="/drive.png"
+            iconUrl="./drive.png"
             url="https://drive.google.com/"
             title="ドライブ"
           />
           <GoogleIcons
-            iconUrl="/spreadsheet.png"
+            iconUrl="./spreadsheet.png"
             url="https://docs.google.com/spreadsheets/"
             title="スプレッドシート"
           />
           <GoogleIcons
-            iconUrl="/slide.png"
+            iconUrl="./slide.png"
             url="https://docs.google.com/presentation/"
             title="スライド"
           />
           <GoogleIcons
-            iconUrl="/document.png"
+            iconUrl="./document.png"
             url="https://docs.google.com/document/"
             title="ドキュメント"
           />
           <GoogleIcons
-            iconUrl="/analytics.png"
+            iconUrl="./analytics.png"
             url="https://analytics.google.com/"
             title="アナリティクス"
           />

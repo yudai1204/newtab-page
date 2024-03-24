@@ -18,7 +18,7 @@ export default function Home() {
         </Box>
         <Box width="100%" textAlign="center">
           <a href="https://www.google.com">
-            <img src="/google.png" alt="Google" style={{ width: 200 }} />
+            <img src="./google.png" alt="Google" style={{ width: 200 }} />
           </a>
           <GoogleSearchBox />
         </Box>
