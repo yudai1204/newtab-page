@@ -77,7 +77,7 @@ export const GoogleSearchBox = () => {
             onChangeSearchBox(value);
           }}
           renderInput={(params) => (
-            <TextField label="Google" name="q" {...params} />
+            <TextField name="q" {...params} placeholder="Google" />
           )}
         />
 
